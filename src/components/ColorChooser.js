@@ -16,13 +16,17 @@ class ColorChooser extends Component {
   state = {  }
   render() { 
 
-    // A list of Color components based on mapping the colors prop. Each Color component is also passed the selectColor prop.
-    // An AddColor component that is passed the addColor prop
+    
+    
 
     return ( 
+      // A list of Color components based on mapping the colors prop. Each Color component is also passed the selectColor prop.
       <ul>
         {ColorChooser.map(colors)}
       </ul>
+      // An AddColor component that is passed the addColor prop
+      <input type="text" {AddColor => (addColor.props)}>Add Color</input>
+      <button type="submit">Add</button>
      );
   }
 }
