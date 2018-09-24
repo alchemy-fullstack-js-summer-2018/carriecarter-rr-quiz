@@ -2,9 +2,15 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 class  extends Component {
+
+  static propTypes = {
+    addColor: PropTypes.func
+  }
+
   state = { 
     color: ''
    }
+   
   render() { 
 
     <form>

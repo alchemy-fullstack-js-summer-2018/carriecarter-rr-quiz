@@ -1,7 +1,16 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import Color from './Color';
+import AddColor from './AddColor';
 
-
+static propTypes = {
+  loadColors: PropTypes.func
+};
 // In componentDidMount, call loadColors prop with an array of 3 colors of your choosing
+componentDidMount() {
+  loadColors(['red', 'green', 'blue']);
+}
 class ColorChooser extends Component {
   state = {  }
   render() { 
