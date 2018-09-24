@@ -5,7 +5,8 @@ import Color from './Color';
 import AddColor from './AddColor';
 
 static propTypes = {
-  loadColors: PropTypes.func
+  colors: PropTypes.str,
+  selectedColor: PropTypes.func
 };
 // In componentDidMount, call loadColors prop with an array of 3 colors of your choosing
 componentDidMount() {
@@ -18,7 +19,11 @@ class ColorChooser extends Component {
     // A list of Color components based on mapping the colors prop. Each Color component is also passed the selectColor prop.
     // An AddColor component that is passed the addColor prop
 
-    return (  );
+    return ( 
+      <ul>
+        {ColorChooser.map(colors)}
+      </ul>
+     );
   }
 }
  
